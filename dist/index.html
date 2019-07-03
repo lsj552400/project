@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>盛趣游戏-游戏创造世界</title>
+    <meta name="description" content="盛趣游戏是全球领先的网络游戏开发商、运营商和发行商。围绕“精品研发、全球发行、IP管理、泛娱乐”四大战略，致力于打造一个国际化的互动娱乐平台。先后推出《热血传奇》、《传奇世界》、《龙之谷》、《传奇永恒》等70多款网络游戏，注册用户超过18亿。">
+    <link  rel="stylesheet" href="./src/common/css/reset.css">
+    <link rel="stylesheet" href="./src/common/js/observer.js">
+    
+   <script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function() {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            if (clientWidth >= 375) { //750这个值，根据设计师的psd宽度来修改，是多少就写多少，现在手机端一般是750px的设计稿，如果设计师给的1920的psd，自己用Photoshop等比例缩小
+                docEl.style.fontSize = '100px';
+            } else {
+                docEl.style.fontSize = 100 * (clientWidth / 375) + 'px'; //750这个值，根据设计师的psd宽度来修改，是多少就写多少，现在手机端一般是750px的设计稿，如果设计师给的1920的psd，自己用Photoshop等比例缩小
+            }
+        };
+        if (!doc.addEventListener) return;
+        //浏览器宽度高度变化的时候
+        win.addEventListener(resizeEvt, recalc, false);
+        //浏览器开始渲染的时候
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+
+</head>
+<body>
+    <div id="contact">
+
+    </div>
+<script type="text/javascript" src="app.js"></script></body>
+</html>
